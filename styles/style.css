@@ -1,3 +1,11 @@
+/* 
+серый (фон) #1f1f1f
+серый (фон) #f2f2f2
+синий (ссылки, фигуры) #2f80ed
+черный (текст) #000000
+ */
+
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -13,7 +21,55 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
+  display: flex;
+  position: relative;
+  background-color: #f2f2f2;
   /* выше установили ограничения для секции */
+}
+
+.logo_place_header {
+  margin-left: 64px;
+  margin-top: 30px;
+  width: 183px;
+  height: 32px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header_title {
+  margin-left: 64px;
+  width: 730px;
+
+}
+
+.header_title h1 {
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: bold;
+}
+
+.header_link {
+  color: #2f80ed;
+  text-decoration: none;
+  position: relative;
+}
+
+
+.header_link::after {
+  background-image: url(../images/);
+
+}
+
+.header_subtitle {
+  width: 388px;
+  margin-left: 64px;
+  margin-bottom: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 25px;
+  font-size: 18px;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -28,4 +84,77 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+}
+
+.header_main-illustration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 765px;
+  height: 608px;
+}
+
+
+.header_main-illustration img {
+  width: 765px;
+  height: 608px;
+}
+
+
+.header_square-pic {
+  width: 568px;
+  height: 568px;
+  background-color: #2f80ed;
+  margin-top: 64px;
+}
+
+.digits {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.digits__title {
+  margin-bottom: 20px;
+  width: 60%;
+  text-align: center;
+}
+
+.digits__subtitle {
+  width: 60%;
+  text-align: center;
+  margin-bottom: 60px;
+  font-weight: normal;
+}
+
+.table {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.table__cell {
+  width: 250px;
+  margin-bottom: 30px;
+}
+
+.table__heading {
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.table__text {
+  margin-top: 20px;
+  line-height: 1.2;
+  font-size: 18px;
 }
